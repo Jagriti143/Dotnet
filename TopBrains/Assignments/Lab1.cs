@@ -1,82 +1,96 @@
-﻿// using System;
+﻿using System;
 
-// public class InventoryItem
-// {
-//     private int _quantity;
+class Program
+{
+    static void Main()
+    {
+        string original = "  Hello, Training Team!  ";
 
-//     public string Name { get; init; }
+        // TODO 1: Trim the string
+        string trimmed = original.Trim();
 
-//     public int Quantity
-//     {
-//         get => _quantity;
-//         set
-//         {
-//             if (value < 0)
-//                 throw new ArgumentException("Quantity cannot be negative");
+        // TODO 2: Compare original and trimmed
+        Console.WriteLine(
+            "ReferenceEquals(original, trimmed): " +
+            object.ReferenceEquals(original, trimmed)
+        );
 
-//             _quantity = value;
-//         }
-//     }
+        // TODO 3: String operations
 
-//     public decimal UnitPrice
-//     {
-//         get;
-//         set
-//         {
-//             if (value <= 0)
-//                 throw new ArgumentException("UnitPrice must be greater than zero");
-//         }
-//     }
+        Console.WriteLine(
+            "Contains \"Training\": " +
+            trimmed.Contains("Training")
+        );
 
-//     public decimal TotalValue => Quantity * UnitPrice;
+        Console.WriteLine(
+            "StartsWith trimmed \"Hello\": " +
+            trimmed.StartsWith("Hello")
+        );
 
-//     public InventoryItem(string name, int quantity, decimal unitPrice)
-//     {
-//         if (string.IsNullOrWhiteSpace(name))
-//             throw new ArgumentException("Name cannot be null or whitespace");
+        Console.WriteLine(
+            "Index of first comma: " +
+            trimmed.IndexOf(',')
+        );
 
-//         Name = name;
-//         Quantity = quantity;
-//         UnitPrice = unitPrice;
-//     }
+        string replaced = trimmed.Replace(
+            "Training Team",
+            "Engineering Team"
+        );
 
-//     public void Restock(int amount)
-//     {
-//         if (amount <= 0)
-//             throw new ArgumentException("Restock amount must be greater than zero");
+        Console.WriteLine(
+            "\"Training Team\" replaced -> " + replaced
+        );
 
-//         Quantity += amount;
-//     }
-// }
+        // TODO 4: Split into words
+        string[] words = trimmed.Split(
+            new char[] { ' ', ',' },
+            StringSplitOptions.RemoveEmptyEntries
+        );
 
-// class Program
-// {
-//     static void Main()
-//     {
-//         var item = new InventoryItem("Keyboard", 3, 45.00m);
+        foreach (string word in words)
+        {
+            Console.WriteLine(word);
+        }
 
-//         Console.WriteLine(
-//             $"Created: {item.Name}, Qty={item.Quantity}, " +
-//             $"Price=${item.UnitPrice:F2}, Total=${item.TotalValue:F2}");
+        // TODO 5: IsNullOrWhiteSpace checks
 
-//         try
-//         {
-//             item.Quantity = -5;
-//         }
-//         catch (ArgumentException ex)
-//         {
-//             Console.WriteLine(
-//                 $"Caught expected error setting Quantity=-5: {ex.Message}");
-//         }
+        string? nullString = null;
+        string emptyString = "";
+        string spaces = "   ";
+        string normalString = "ok";
 
-//         try
-//         {
-//             item.UnitPrice = 0;
-//         }
-//         catch (ArgumentException ex)
-//         {
-//             Console.WriteLine(
-//                 $"Caught expected error setting UnitPrice=0: {ex.Message}");
-//         }
-//     }
-// }
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(null): " +
+            string.IsNullOrWhiteSpace(nullString)
+        );
+
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(\"\"): " +
+            string.IsNullOrWhiteSpace(emptyString)
+        );
+
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(\"   \"): " +
+            string.IsNullOrWhiteSpace(spaces)
+        );
+
+        Console.WriteLine(
+            "IsNullOrWhiteSpace(\"ok\"): " +
+            string.IsNullOrWhiteSpace(normalString)
+        );
+
+        // Bonus
+        string first = "HELLO";
+        string second = "hello";
+
+        int comparison = string.Compare(
+            first,
+            second,
+            StringComparison.OrdinalIgnoreCase
+        );
+
+        Console.WriteLine(
+            "Case-insensitive comparison result: " + comparison
+        );
+    }
+}
