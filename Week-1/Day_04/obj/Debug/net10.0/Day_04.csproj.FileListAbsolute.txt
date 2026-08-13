@@ -1,0 +1,14 @@
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/bin/Debug/net10.0/Day_04
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/bin/Debug/net10.0/Day_04.deps.json
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/bin/Debug/net10.0/Day_04.runtimeconfig.json
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/bin/Debug/net10.0/Day_04.dll
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/bin/Debug/net10.0/Day_04.pdb
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/Day_04.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/Day_04.AssemblyInfoInputs.cache
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/Day_04.AssemblyInfo.cs
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/Day_04.csproj.CoreCompileInputs.cache
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/Day_04.dll
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/refint/Day_04.dll
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/Day_04.pdb
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/Day_04.genruntimeconfig.cache
+/Users/jagriti/Desktop/C#Training/Week-1/Day_04/obj/Debug/net10.0/ref/Day_04.dll

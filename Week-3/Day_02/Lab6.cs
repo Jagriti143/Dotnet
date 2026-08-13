@@ -1,0 +1,203 @@
+// using System;
+// using System.Collections.Generic;
+// using System.Linq;
+
+// public enum ShapeKind
+// {
+//     Circle,
+//     Rectangle,
+//     Triangle
+// }
+
+// public abstract class Shape
+// {
+//     public ShapeKind Kind { get; protected set; }
+
+//     public abstract double Area();
+
+//     public abstract double Perimeter();
+
+//     public override string ToString()
+//     {
+//         return $"{Kind}: Area={Area():F2}, Perimeter={Perimeter():F2}";
+//     }
+// }
+
+// public class Circle : Shape
+// {
+//     public double Radius { get; }
+
+//     public Circle(double radius)
+//     {
+//         Radius = radius;
+//         Kind = ShapeKind.Circle;
+//     }
+
+//     public override double Area()
+//     {
+//         return Math.PI * Radius * Radius;
+//     }
+
+//     public override double Perimeter()
+//     {
+//         return 2 * Math.PI * Radius;
+//     }
+// }
+
+// public class Rectangle : Shape
+// {
+//     public double Width { get; }
+
+//     public double Height { get; }
+
+//     public Rectangle(double width, double height)
+//     {
+//         Width = width;
+//         Height = height;
+
+//         Kind = ShapeKind.Rectangle;
+//     }
+
+//     public override double Area()
+//     {
+//         return Width * Height;
+//     }
+
+//     public override double Perimeter()
+//     {
+//         return 2 * (Width + Height);
+//     }
+// }
+
+// public class Triangle : Shape
+// {
+//     public double A { get; }
+
+//     public double B { get; }
+
+//     public double C { get; }
+
+//     public Triangle(double a, double b, double c)
+//     {
+//         A = a;
+//         B = b;
+//         C = c;
+
+//         Kind = ShapeKind.Triangle;
+//     }
+
+//     public override double Area()
+//     {
+//         double s = (A + B + C) / 2;
+
+//         return Math.Sqrt(
+//             s * (s - A) * (s - B) * (s - C)
+//         );
+//     }
+
+//     public override double Perimeter()
+//     {
+//         return A + B + C;
+//     }
+// }
+
+// public struct BoundingBox
+// {
+//     public double Width;
+
+//     public double Height;
+
+//     public BoundingBox(double w, double h)
+//     {
+//         Width = w;
+//         Height = h;
+//     }
+
+//     public static BoundingBox operator *(
+//         BoundingBox box,
+//         double factor)
+//     {
+//         return new BoundingBox(
+//             box.Width * factor,
+//             box.Height * factor);
+//     }
+
+//     public override string ToString()
+//     {
+//         return $"({Width:0.##}, {Height:0.##})";
+//     }
+// }
+
+// public static class ShapeMath
+// {
+//     // Total area of all shapes
+//     public static double TotalArea(
+//         IEnumerable<Shape> shapes)
+//     {
+//         return shapes.Sum(shape => shape.Area());
+//     }
+
+//     // Total area filtered by ShapeKind
+//     public static double TotalArea(
+//         IEnumerable<Shape> shapes,
+//         ShapeKind onlyKind)
+//     {
+//         return shapes
+//             .Where(shape => shape.Kind == onlyKind)
+//             .Sum(shape => shape.Area());
+//     }
+// }
+
+// public class Program
+// {
+//     public static void Main()
+//     {
+//         List<Shape> shapes = new List<Shape>
+//         {
+//             new Circle(3),
+
+//             new Rectangle(4, 6),
+
+//             new Triangle(3, 4, 5)
+//         };
+
+//         // Polymorphic printing
+//         foreach (Shape shape in shapes)
+//         {
+//             Console.WriteLine(shape);
+//         }
+
+//         Console.WriteLine();
+
+//         // Total area
+//         double totalArea =
+//             ShapeMath.TotalArea(shapes);
+
+//         Console.WriteLine(
+//             $"Total area (all shapes): {totalArea:F2}"
+//         );
+
+//         // Circle area
+//         double circleArea =
+//             ShapeMath.TotalArea(
+//                 shapes,
+//                 ShapeKind.Circle);
+
+//         Console.WriteLine(
+//             $"Total area (circles only): {circleArea:F2}"
+//         );
+
+//         Console.WriteLine();
+
+//         // BoundingBox operator
+//         BoundingBox box =
+//             new BoundingBox(4, 3);
+
+//         BoundingBox scaledBox =
+//             box * 2;
+
+//         Console.WriteLine(
+//             $"Scaled bounding box {box} * 2 -> {scaledBox}"
+//         );
+//     }
+// }
