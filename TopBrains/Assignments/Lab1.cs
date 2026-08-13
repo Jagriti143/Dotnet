@@ -1,96 +1,82 @@
 ﻿// using System;
 
+// public class InventoryItem
+// {
+//     private int _quantity;
+
+//     public string Name { get; init; }
+
+//     public int Quantity
+//     {
+//         get => _quantity;
+//         set
+//         {
+//             if (value < 0)
+//                 throw new ArgumentException("Quantity cannot be negative");
+
+//             _quantity = value;
+//         }
+//     }
+
+//     public decimal UnitPrice
+//     {
+//         get;
+//         set
+//         {
+//             if (value <= 0)
+//                 throw new ArgumentException("UnitPrice must be greater than zero");
+//         }
+//     }
+
+//     public decimal TotalValue => Quantity * UnitPrice;
+
+//     public InventoryItem(string name, int quantity, decimal unitPrice)
+//     {
+//         if (string.IsNullOrWhiteSpace(name))
+//             throw new ArgumentException("Name cannot be null or whitespace");
+
+//         Name = name;
+//         Quantity = quantity;
+//         UnitPrice = unitPrice;
+//     }
+
+//     public void Restock(int amount)
+//     {
+//         if (amount <= 0)
+//             throw new ArgumentException("Restock amount must be greater than zero");
+
+//         Quantity += amount;
+//     }
+// }
+
 // class Program
 // {
 //     static void Main()
 //     {
-//         string original = "  Hello, Training Team!  ";
-
-//         // TODO 1: Trim the string
-//         string trimmed = original.Trim();
-
-//         // TODO 2: Compare original and trimmed
-//         Console.WriteLine(
-//             "ReferenceEquals(original, trimmed): " +
-//             object.ReferenceEquals(original, trimmed)
-//         );
-
-//         // TODO 3: String operations
+//         var item = new InventoryItem("Keyboard", 3, 45.00m);
 
 //         Console.WriteLine(
-//             "Contains \"Training\": " +
-//             trimmed.Contains("Training")
-//         );
+//             $"Created: {item.Name}, Qty={item.Quantity}, " +
+//             $"Price=${item.UnitPrice:F2}, Total=${item.TotalValue:F2}");
 
-//         Console.WriteLine(
-//             "StartsWith trimmed \"Hello\": " +
-//             trimmed.StartsWith("Hello")
-//         );
-
-//         Console.WriteLine(
-//             "Index of first comma: " +
-//             trimmed.IndexOf(',')
-//         );
-
-//         string replaced = trimmed.Replace(
-//             "Training Team",
-//             "Engineering Team"
-//         );
-
-//         Console.WriteLine(
-//             "\"Training Team\" replaced -> " + replaced
-//         );
-
-//         // TODO 4: Split into words
-//         string[] words = trimmed.Split(
-//             new char[] { ' ', ',' },
-//             StringSplitOptions.RemoveEmptyEntries
-//         );
-
-//         foreach (string word in words)
+//         try
 //         {
-//             Console.WriteLine(word);
+//             item.Quantity = -5;
+//         }
+//         catch (ArgumentException ex)
+//         {
+//             Console.WriteLine(
+//                 $"Caught expected error setting Quantity=-5: {ex.Message}");
 //         }
 
-//         // TODO 5: IsNullOrWhiteSpace checks
-
-//         string? nullString = null;
-//         string emptyString = "";
-//         string spaces = "   ";
-//         string normalString = "ok";
-
-//         Console.WriteLine(
-//             "IsNullOrWhiteSpace(null): " +
-//             string.IsNullOrWhiteSpace(nullString)
-//         );
-
-//         Console.WriteLine(
-//             "IsNullOrWhiteSpace(\"\"): " +
-//             string.IsNullOrWhiteSpace(emptyString)
-//         );
-
-//         Console.WriteLine(
-//             "IsNullOrWhiteSpace(\"   \"): " +
-//             string.IsNullOrWhiteSpace(spaces)
-//         );
-
-//         Console.WriteLine(
-//             "IsNullOrWhiteSpace(\"ok\"): " +
-//             string.IsNullOrWhiteSpace(normalString)
-//         );
-
-//         // Bonus
-//         string first = "HELLO";
-//         string second = "hello";
-
-//         int comparison = string.Compare(
-//             first,
-//             second,
-//             StringComparison.OrdinalIgnoreCase
-//         );
-
-//         Console.WriteLine(
-//             "Case-insensitive comparison result: " + comparison
-//         );
+//         try
+//         {
+//             item.UnitPrice = 0;
+//         }
+//         catch (ArgumentException ex)
+//         {
+//             Console.WriteLine(
+//                 $"Caught expected error setting UnitPrice=0: {ex.Message}");
+//         }
 //     }
 // }
