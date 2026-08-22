@@ -1,0 +1,15 @@
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/bin/Debug/net10.0/InsightDesk
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/bin/Debug/net10.0/InsightDesk.deps.json
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/bin/Debug/net10.0/InsightDesk.runtimeconfig.json
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/bin/Debug/net10.0/InsightDesk.dll
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/bin/Debug/net10.0/InsightDesk.pdb
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.AssemblyInfoInputs.cache
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.AssemblyInfo.cs
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.csproj.CoreCompileInputs.cache
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.sourcelink.json
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.dll
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/refint/InsightDesk.dll
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.pdb
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/InsightDesk.genruntimeconfig.cache
+/Users/jagriti/Desktop/C#Training/Week-4/Day_06/InsightDesk/obj/Debug/net10.0/ref/InsightDesk.dll
